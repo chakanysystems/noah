@@ -1,0 +1,61 @@
+# Cabal and GHC build artefacts
+dist/
+dist-newstyle/
+*.hi
+*.o
+
+# Haskell Tool Stack-related
+.stack-work/
+tests/integration/tests/**/*.yaml.lock
+
+# Stack's GitHub workflow-related
+_release/
+
+# MkDocs-related
+_site/
+.python-doc-virtualenv
+
+# Haskell Language Server-related
+hie.yaml
+
+# Stan-related
+.hie
+stan.html
+
+# Emacs-related
+.dir-locals.el
+*_flymake.hs
+
+# Vim-related
+*.swp
+*.tag
+
+# IntelliJ IDE-related
+.idea/
+*.iml
+
+# hsenv-related
+.hsenv
+
+# Vagrant-related
+.vagrant/
+
+# HSpec-related
+.hspec-failures
+
+# macOS-related
+.DS_Store
+
+# VS Code workspace settings
+.vscode
+
+# VS Code Counter (Visual Studio Code Extension)-related
+.VSCodeCounter
+
+# Unexplained
+*~
+*.imports
+src/highlight.js
+src/style.css
+etc/scripts/stack-scripts.cabal
+better-cache/
