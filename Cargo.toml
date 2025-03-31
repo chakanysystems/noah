@@ -4,9 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [features]
-default = ["postgres", "search"]
-postgres = ["sqlx/postgres", "pgvector"]
-search = ["postgres"]
+default = []
+relay = []
+discovery = ["pgvector"]
+search = ["discovery"]
 
 [dependencies]
 clap = { version = "4.3", features = ["derive"] }
@@ -15,10 +16,12 @@ tokio = { version = "1.0", features = ["full"] }
 sqlx = { version = "0.7", features = [
     "runtime-tokio-native-tls",
     "json",
-], optional = true }
+    "postgres",
+] }
 pgvector = { version = "0.3", features = ["sqlx"], optional = true }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 reqwest = { version = "0.11", features = ["json"] }
 tracing = "0.1"
 tracing-subscriber = "0.3"
+anyhow = "1.0.97"
